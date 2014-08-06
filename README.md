@@ -1,9 +1,9 @@
-=======================================#
-AnalisisAlgoritmos                     #
-Dennisse Rojas Casanova                #
-2013001522                             #
-Tarea Corta #1                         #
-=======================================#
+
+AnalisisAlgoritmos                     
+Dennisse Rojas Casanova                
+2013001522                             
+Tarea Corta #1                         
+
 
 En esta tarea implementa dos algoritmos de ordenamiento de arreglos: BubbleSort y SelectionSort. 
 La implementación se realizó en python 3.3.2 en la plataforma Windows 8.1.
