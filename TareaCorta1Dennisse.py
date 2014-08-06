@@ -78,18 +78,93 @@ def main(M):
     selectionSort(listaPruebaSelection)
     finS =  time.time()
     totalS = finS- inicioS
-    print("Caso intermedio(lista desordenada)\n Tiempo:", total,  "\n")
+    print("Caso intermedio(lista desordenada)\n Tiempo:", totalS,  "\n")
   
     inicioS = time.time()
     selectionSort(listaPruebaSelection)
     finS =  time.time()
     totalS = finS- inicioS
-    print("Mejor escenario (lista ordenada)\n Tiempo:", total, "\n")
+    print("Mejor escenario (lista ordenada)\n Tiempo:", totalS, "\n")
 
     inicioS = time.time()
     selectionSort(listaPruebaSelection)
     finS =  time.time()
     totalS = finS- inicioS
-    print("Peor caso(lista inversa)\n Tiempo:", total, "\n")
+    print("Peor caso(lista inversa)\n Tiempo:", totalS, "\n")
 
-main(10000)
+#==============================================================================================
+
+def mainExtra(M):
+
+    print("===========================================================================")
+    print("Experimentación con otras intancias\n")
+
+    listaPruebaEx = []
+    
+
+    largoListaPruebaEx = M
+
+    numero = random.randint(700,100000)
+    for indice in range(largoListaPruebaEx) :
+        for potencia in range(1,M):
+            listaPruebaEx.append(numero ** potencia)
+    
+
+    
+    print("Parámetro M indicado (largo de la lista a ordenar): ", M)
+    print("===========================================================================")
+    print("Ordenando con el método BubbleSort\n")
+   
+
+    listaPruebaSelection = listaPruebaEx
+    listaPruebaBubble = listaPruebaEx
+
+    inicio = time.time()
+    bubbleSort(listaPruebaBubble)
+    fin =  time.time()
+    total = fin- inicio
+    print("Caso intermedio(lista desordenada)\n Tiempo:", total,  "\n")
+    
+    inicio = time.time()
+    bubbleSort(listaPruebaBubble)
+    fin =  time.time()
+    total = fin- inicio
+    print("Mejor escenario (lista ordenada)\n Tiempo:", total, "\n")
+    
+    listaPruebaBubble.reverse()
+    inicio = time.time()
+    bubbleSort(listaPruebaBubble)
+    fin =  time.time()
+    total = fin- inicio
+    print("Peor caso(lista inversa)\n Tiempo:", total, "\n")
+     
+    
+    print("===========================================================================")
+    print("Ordenando con el método SelectionSort\n")
+
+    inicioS = time.time()
+    selectionSort(listaPruebaSelection)
+    finS =  time.time()
+    totalS = finS- inicioS
+    print("Caso intermedio(lista desordenada)\n Tiempo:", totalS,  "\n")
+  
+    inicioS = time.time()
+    selectionSort(listaPruebaSelection)
+    finS =  time.time()
+    totalS = finS- inicioS
+    print("Mejor escenario (lista ordenada)\n Tiempo:", totalS, "\n")
+
+    inicioS = time.time()
+    selectionSort(listaPruebaSelection)
+    finS =  time.time()
+    totalS = finS- inicioS
+    print("Peor caso(lista inversa)\n Tiempo:", totalS, "\n")
+
+#==============================================================================================
+  
+main(100)
+mainExtra(100)
+
+
+
+
