@@ -1,0 +1,15 @@
+package mochilaPack;
+
+public class Mochila {
+	int pesoMaximo;
+	
+	public Mochila(int pesoMaximo) {
+		this.pesoMaximo = pesoMaximo;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

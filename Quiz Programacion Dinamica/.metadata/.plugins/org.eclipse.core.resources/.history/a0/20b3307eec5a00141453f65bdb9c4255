@@ -1,0 +1,32 @@
+package mochilaPack;
+
+public class AplMochila {
+
+	public AplMochila() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		Mochila backpack = new Mochila(10);
+		Objeto obj1 = new Objeto(5,10);
+		Objeto obj2 = new Objeto(4,40);
+		Objeto obj3 = new Objeto(6,30);
+		Objeto obj4 = new Objeto(3,50);
+		
+		backpack.listaObjetosCandidatos.add(obj1);
+		backpack.listaObjetosCandidatos.add(obj2);
+		backpack.listaObjetosCandidatos.add(obj3);
+		backpack.listaObjetosCandidatos.add(obj4);
+		
+		backpack.setTotalObjetosCandidatos(backpack.listaObjetosCandidatos.size());
+		
+		
+		// Crea una matriz con las opciones candidatas
+		
+		int[][] matrizCandidata = new int[backpack.totalObjetosCandidatos + 1][backpack.pesoMaximo + 1];
+		System.out.println(matrizCandidata);
+		
+
+	}
+
+}

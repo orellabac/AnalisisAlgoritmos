@@ -1,0 +1,10 @@
+package Moneda;
+
+public class AplCambio {
+	public static void main(String[] args){
+		Cambio cambio = new Cambio(12, new int[]{1,6,10});
+		
+		return cambio.getVectorSeleccion();
+	}
+
+}

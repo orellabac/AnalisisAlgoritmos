@@ -1,0 +1,86 @@
+package mochilaPack;
+
+public class AplMochila {
+
+	public AplMochila() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		Mochila backpack = new Mochila(10);
+		Objeto obj1 = new Objeto(5,10);
+		Objeto obj2 = new Objeto(4,40);
+		Objeto obj3 = new Objeto(6,30);
+		Objeto obj4 = new Objeto(3,50);
+		
+		backpack.listaObjetosCandidatos.add(obj1);
+		backpack.listaObjetosCandidatos.add(obj2);
+		backpack.listaObjetosCandidatos.add(obj3);
+		backpack.listaObjetosCandidatos.add(obj4);
+		
+		backpack.setTotalObjetosCandidatos(backpack.listaObjetosCandidatos.size());
+		
+		
+		// Crea una matriz con las opciones candidatas
+		
+		int[][] matrizCandidata = new int[backpack.totalObjetosCandidatos+1][backpack.pesoMaximo+1];
+		
+		// Si la capacidad de la mochila es 0
+		
+		for (int col = 0; col <= backpack.pesoMaximo; col++) {
+			matrizCandidata[0][col] = 0;
+			}
+		
+		// Si no hay objetos 
+				
+		for (int row = 0; row <= backpack.totalObjetosCandidatos; row++) {
+			matrizCandidata[row][0] = 0;
+			}
+
+		// Llenamos el resto de la matriz
+		
+		for (int item=1;item<=backpack.totalObjetosCandidatos;item++){
+			
+			for (int weight=1;weight<= backpack.pesoMaximo ;weight++){
+				
+				if(backpack.listaObjetosCandidatos.get(item-1).getPeso() <= weight){
+					
+					int valorElementoActual = backpack.listaObjetosCandidatos.get(item-1).getBeneficio();
+					int pesoElementoActual = backpack.listaObjetosCandidatos.get(item-1).getPeso();
+					int valor = matrizCandidata[item-1][weight-pesoElementoActual];
+					
+					matrizCandidata[item][weight]=
+							Math.max(valorElementoActual + valor,matrizCandidata[item-1][weight]);
+				}
+				else{
+					matrizCandidata[item][weight]= matrizCandidata[item-1][weight];
+				}
+			}
+			
+			
+			
+		}
+		
+		//Printing the matrix
+		
+		System.out.print("La matriz candidata es la siguiente: \n" );
+		
+		
+		for (int[] rows : matrizCandidata) {
+	
+		for (int col : rows) {
+	
+		System.out.format("%5d", col);
+	
+		}
+	
+		System.out.println();
+	
+		}
+		
+		System.out.println("El máximo valor que se puede meter en la michila es de: " + matrizCandidata[backpack.totalObjetosCandidatos][backpack.pesoMaximo]);
+		//return ;
+				
+	}
+
+}

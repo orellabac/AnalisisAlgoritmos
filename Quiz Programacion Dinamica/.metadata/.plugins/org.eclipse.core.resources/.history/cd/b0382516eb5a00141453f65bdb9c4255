@@ -1,0 +1,17 @@
+package mochilaPack;
+
+public class Objeto {
+
+	int peso, beneficio;
+	
+	public Objeto(int peso, int beneficio) {
+		this.peso = peso;
+		this.beneficio = beneficio;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,14 @@
+package mochilaPack;
+
+public class Objeto {
+
+	int peso, beneficio;
+	
+	public Objeto(int peso, int beneficio) {
+		this.peso = peso;
+		this.beneficio = beneficio;
+	}
+
+
+
+}

@@ -1,0 +1,14 @@
+package mochilaPack;
+
+public class Objeto {
+
+	public Objeto() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
