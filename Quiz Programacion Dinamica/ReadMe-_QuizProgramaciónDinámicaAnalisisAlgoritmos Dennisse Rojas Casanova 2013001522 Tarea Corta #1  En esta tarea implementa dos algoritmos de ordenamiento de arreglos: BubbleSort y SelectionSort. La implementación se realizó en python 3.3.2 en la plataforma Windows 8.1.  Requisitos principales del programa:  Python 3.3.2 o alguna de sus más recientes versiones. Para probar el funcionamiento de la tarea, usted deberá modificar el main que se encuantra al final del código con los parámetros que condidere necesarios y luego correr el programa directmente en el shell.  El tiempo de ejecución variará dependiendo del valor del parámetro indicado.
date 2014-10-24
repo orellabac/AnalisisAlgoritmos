@@ -1,0 +1,11 @@
+AnalisisAlgoritmos
+Dennisse Rojas Casanova
+2013001522
+Quiz Programación Dinámica
+
+En esta tarea implementa dos algoritmos clásicos de Programación Dinámica en POO: El Problema de la Mochila y el Cambio de Moneda.
+La implementación se realizó en Eclipse para Java en la plataforma Windows 8.1.
+
+Para probar el funcionamiento de la tarea, usted deberá abrir los paquetes Problema de la Mochila y Problema del Cambio de Moneda y ejecutar las clases AplMochila y AplCambio.
+
+En estas mismas ejecuciones, usted podrá modificar el main con los parámetros que considere convenientes.
